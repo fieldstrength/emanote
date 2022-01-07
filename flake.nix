@@ -1,7 +1,7 @@
 {
   description = "emanote";
   inputs = {
-    ema.url = "github:srid/ema/master";
+    ema.url = "github:fieldstrength/ema/timestamped-scripts";
     # Use the nixpkgs used by the pinned ema.
     nixpkgs.follows = "ema/nixpkgs";
     windicss = {
@@ -79,7 +79,7 @@
                   (with (if system == "aarch64-darwin"
                   then m1MacHsBuildTools
                   else pkgs.haskellPackages); [
-                    # Specify your build/dev dependencies here. 
+                    # Specify your build/dev dependencies here.
                     cabal-fmt
                     cabal-install
                     ghcid
