@@ -35,8 +35,6 @@ modelFolgezettelAncestorTree r0 model =
           folgezettelParents =
             folgezettelBacklinks
               <> folgezettelFrontlinks
-              -- Folders are automatically made a folgezettel
-              <> maybeToList (parentLmlRoute =<< leftToMaybe (R.modelRouteCase r))
       fmap catMaybes . forM folgezettelParents $ \parentR -> do
         let parentModelR = R.liftModelRoute . R.lmlRouteCase $ parentR
         gets (parentModelR `Set.member`) >>= \case

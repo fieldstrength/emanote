@@ -206,6 +206,6 @@ library
 
   autogen-modules: Paths_emanote
 
-executable emanote
+executable emanote-no-implicit-node
   import:  library-common
   main-is: Main.hs
